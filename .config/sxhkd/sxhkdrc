@@ -40,7 +40,10 @@ super + c
 	chromium
 
 
-
+#browser
+ super + f
+           firefox
+	   
 
 #lockscreen
 super + l
