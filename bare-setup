@@ -17,7 +17,7 @@ elogind mpv chromium firefox qbittorrent gvfs-mtp Thunar thunar-archive-plugin t
 neofetch i3lock nitrogen curl ntfs-3g picom bluez blueman pipewire libspa-bluetooth pavucontrol rofi \
 torbrowser-launcher telegram-desktop github-cli yt-dlp polkit-gnome gnome-calculator scrot eog evince \
 kitty wget mousepad xorg-minimal xrandr xsetroot xdg-user-dirs $GPUDRE network-manager-applet xz \
-os-prober lm_sensors zsh zsh-syntax-highlighting zsh-autosuggestions	
+os-prober lm_sensors brightnessctl zsh zsh-syntax-highlighting zsh-autosuggestions	
 }
 
 START_SERVICES(){
@@ -27,6 +27,7 @@ sudo ln -s /etc/sv/polkitd /var/service
 #sudo ln -s /etc/sv/rtkit /var/service
 sudo ln -s /etc/sv/elogind /var/service
 sudo ln -s /usr/share/fontconfig/conf.avail/70-no-bitmaps.conf /etc/fonts/conf.d/
+sudo gpasswd -a $USER video
 sudo xbps-reconfigure -f fontconfig
 #sudo echo "GRUB_DISABLE_OS_PROBER=false" >> /etc/default/grub
 #sudo grub-mkconfig -o /boot/grub/grub.cfg
