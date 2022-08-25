@@ -45,6 +45,13 @@ super + c
            firefox
 	   
 
+#brightness control                                                                                                                                                          
+XF86MonBrightness{Up,Down}                                                                                                                                                   
+	 brightnessctl s 10{+,-}                                                                                                                                                    
+                           	   
+	
+	   
+
 #lockscreen
 super + l
 	i3lock -c 0D0E0D  
