@@ -37,20 +37,24 @@ super + @space
 
 #browser
 super + c
-	chromium
+	firefox
 
-
-#browser
- super + f
-           firefox
-	   
 
 #brightness control                                                                                                                                                          
 XF86MonBrightness{Up,Down}                                                                                                                                                   
 	 brightnessctl s 10{+,-}                                                                                                                                                    
                            	   
 	
-	   
+
+#volume control
+XF86Audio{Raise,Lower,Mute}Volume  
+	pactl set-sink-volume @DEFAULT_SINK@ {+10%,-10%,toggle}
+
+
+XF86AudioMute
+	pactl set-sink-mute @DEFAULT_SINK@ toggle
+
+
 
 #lockscreen
 super + l
