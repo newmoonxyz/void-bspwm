@@ -30,6 +30,7 @@ sudo ln -s /usr/share/fontconfig/conf.avail/70-no-bitmaps.conf /etc/fonts/conf.d
 sudo gpasswd -a $USER video
 sudo xbps-reconfigure -f fontconfig
 #sed 's/#AutoEnable=true/AutoEnable=false/g' /etc/bluetooth/main.conf 
+#xdg-user-dirs-update
 #sudo echo "GRUB_DISABLE_OS_PROBER=false" >> /etc/default/grub
 #sudo grub-mkconfig -o /boot/grub/grub.cfg
 
